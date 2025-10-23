@@ -1,173 +1,120 @@
 # ⚡ Simple Web Vulnerability Scanner
 
-A **Flask-based web vulnerability scanner** designed for **educational and research use**.  
-It detects common vulnerabilities like **Cross-Site Scripting (XSS)**, **SQL Injection (SQLi)**, and **Path Traversal** while providing a modern, interactive UI with downloadable reports.
+A **Flask-based web vulnerability scanner** designed for **educational and research use**.
+It detects common vulnerabilities like **Cross-Site Scripting (XSS)**, **SQL Injection (SQLi)**, and **Path Traversal**, while providing a clean web interface with downloadable reports.
 
 ---
 
-## 🧠 Overview
+## 🧬 Overview
 
-This project crawls web pages, detects forms, and injects payloads to analyze responses for potential vulnerabilities.  
-It also includes **built-in demo results** so you can test and visualize realistic scans without connecting to live targets.
-
----
-
-## 🧩 Tech Stack
-
-- **Language:** Python 3.11  
-- **Framework:** Flask  
-- **Libraries:** BeautifulSoup4, Requests, Tabulate  
-- **Frontend:** HTML, Bootstrap 5  
-- **Output Format:** JSON Reports  
+This project crawls target websites, identifies input fields, and injects payloads to analyze responses for potential vulnerabilities.
+It includes **built-in demo data** for realistic scan results even without external targets.
 
 ---
 
-## 📁 Project Structure
+## 🧉 Tech Stack
 
-```
-web-vuln-scanner/
-│
-├── webapp/
-│   ├── app.py                 # Flask web server
-│   └── templates/
-│       ├── index.html         # Homepage
-│       └── results.html       # Scan results page
-│
-├── scanner/
-│   ├── crawler.py
-│   ├── injector.py
-│   ├── form_parser.py
-│   ├── payloads.py
-│   ├── logger.py
-│   ├── sample_data.py         # Demo scan results
-│   └── detectors.py
-│
-├── reports/                   # Auto-generated scan reports
-├── requirements.txt
-└── README.md
-```
+| Component         | Technology                          |
+| ----------------- | ----------------------------------- |
+| **Language**      | Python 3.11                         |
+| **Framework**     | Flask                               |
+| **Libraries**     | Requests, BeautifulSoup4, Tabulate  |
+| **Frontend**      | HTML + Bootstrap 5                  |
+| **Report Format** | JSON (auto-generated in `/reports`) |
 
 ---
 
-## ⚙️ Installation Guide
+## ⚙️ Setup & Execution Steps
 
-### Step 1️⃣ — Clone the Repository
-```bash
-git clone https://github.com/Krshnapriyaa/web-vuln-scanner.git
-cd web-vuln-scanner
-```
-
-### Step 2️⃣ — Create a Virtual Environment
-```bash
-python -m venv venv
-venv\Scripts\activate        # For Windows
-```
-
-### Step 3️⃣ — Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+| Step   | Command / Action                                                                            | Expected Result                              | Screenshot                                                   |
+| ------ | ------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------ |
+| **1**  | `git clone https://github.com/Krshnapriyaa/web-vuln-scanner.git` <br> `cd web-vuln-scanner` | Project cloned successfully                  | ![Step 1](screenshots/Screenshot%20\(205\).png)              |
+| **2**  | `python -m venv venv` <br> `venv\\Scripts\\activate`                                        | Virtual environment created                  | ![Step 2](screenshots/Screenshot%20\(206\).png)              |
+| **3**  | `pip install -r requirements.txt`                                                           | All dependencies installed successfully      | ![Step 3](screenshots/Screenshot%202025-10-23%20185456.png)  |
+| **4**  | `python -m webapp.app`                                                                      | Flask app started at `http://127.0.0.1:5000` | ![Step 4](screenshots/Screenshot%20\(212\).png)              |
+| **5**  | Open browser → `http://127.0.0.1:5000`                                                      | Homepage loaded successfully                 | ![Step 5](screenshots/Screenshot%202025-10-23%20185456.png)  |
+| **6**  | Enter target URL → Click **Start Scan**                                                     | Scan initiated successfully                  | ![Step 6](screenshots/Screenshot%202025-10-23%20185942.png)  |
+| **7**  | Scan progress visible                                                                       | Detected results displayed in table          | ![Step 7](screenshots/Screenshot%202025-10-23%20190010.png)  |
+| **8**  | View results for login                                                                      | SQL Injection detected                       | ![Step 8](screenshots/Screenshot%202025-10-23%20190036.png)  |
+| **9**  | View results for search                                                                     | XSS vulnerability identified                 | ![Step 9](screenshots/Screenshot%202025-10-23%20190101.png)  |
+| **10** | Download JSON report                                                                        | Saved under `/reports/` folder               | ![Step 10](screenshots/Screenshot%202025-10-23%20190224.png) |
 
 ---
 
-### Step 4️⃣ — Verify Installed Packages
-```bash
-python -m pip list
-```
+## 🌐 Usage Guide
 
----
+### 1️⃣ Launch the App
 
-### Step 5️⃣ — Run the Application
+Run:
+
 ```bash
 python -m webapp.app
 ```
 
-Now open **[http://127.0.0.1:5000](http://127.0.0.1:5000)** in your browser.
-
----
-
-## 🌐 Usage
-
-### 1️⃣ Open the Application
-
-Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.  
-You’ll see the **Simple Web Vulnerability Scanner** home screen.
-
----
+Open your browser and go to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ### 2️⃣ Start a New Scan
 
-Enter a target URL, for example:
+Enter a URL like:
 
 ```
 https://example.com/search?q=test
 ```
 
-You can also use any of these **demo URLs** to instantly see sample vulnerability results:
+You can also test using these demo URLs:
 
-| Target URL | Description |
-|-------------|-------------|
-| `https://example.com/search?q=test` | Reflected XSS |
-| `https://app.local/login` | SQL Injection (Auth Bypass) |
-| `https://shop.example/item?id=45` | SQL Injection (Union) |
-| `https://blog.example/comment` | Stored XSS |
-| `https://api.example/profile` | Reflected XSS in JSON |
-| `https://legacy.example/item?cat=1` | Command Injection |
-| `https://example.com/filter` | Path Traversal |
-| `https://example.com/profile?user=krish` | Encoded XSS |
-| `https://example.com/products?sort=name` | SQL Injection (Boolean) |
-| `http://127.0.0.1:8080/test_form.html` | Local test target |
+| URL                                    | Description                 |
+| -------------------------------------- | --------------------------- |
+| `https://example.com/search?q=test`    | Reflected XSS               |
+| `https://app.local/login`              | SQL Injection (Auth Bypass) |
+| `https://shop.example/item?id=45`      | SQL Injection (Union)       |
+| `https://blog.example/comment`         | Stored XSS                  |
+| `https://api.example/profile`          | JSON-based XSS              |
+| `https://legacy.example/item?cat=1`    | Command Injection           |
+| `https://example.com/filter`           | Path Traversal              |
+| `http://127.0.0.1:8080/test_form.html` | Local demo test             |
 
 ---
 
-## 🧾 Results and Reports
-
-After scanning, you’ll be redirected to the **results page**.  
-Each entry includes:
-- Input field  
-- Payload used  
-- Vulnerability detected (XSS/SQLi)  
-- Snippet of response  
-- Severity, Confidence, and Remediation advice  
-
-You can also download the report as a JSON file.
-
----
-
-## 📁 Sample JSON Report
+## 🧾 Example Report
 
 ```json
 [
   {
-    "input": "username",
-    "payload": "admin' OR '1'='1",
-    "xss": false,
-    "sqli": true,
-    "severity": "Critical",
-    "confidence": "85%",
-    "remediation": "Use prepared statements, parameterized queries"
+    "url": "https://example.com/search?q=test",
+    "input": "q",
+    "payload": "\"><script>alert(1)</script>",
+    "vulnerability": "Reflected XSS",
+    "severity": "High",
+    "confidence": "90%",
+    "remediation": "Escape input and apply Content Security Policy"
   }
 ]
 ```
 
-Reports are automatically saved inside the `/reports/` folder.
+---
+
+## 🧉 Results Page Preview
+
+![Result Table](screenshots/Screenshot%202025-10-23%20190010.png)
+![XSS Result](screenshots/Screenshot%202025-10-23%20190036.png)
+![SQLi Result](screenshots/Screenshot%202025-10-23%20190101.png)
+![Report Download](screenshots/Screenshot%202025-10-23%20190224.png)
 
 ---
 
 ## ⚠️ Disclaimer
 
-> **Educational Use Only**  
-> Do not scan websites without authorization.  
-> This project is intended solely for academic and security learning purposes.
+> **Use this tool only on authorized systems.**
+> This project is intended for cybersecurity education, academic demonstration, and research purposes.
 
 ---
 
 ## 👩‍💻 Author
 
-**Krishna Priya K P**  
-🎓 MCA | Cybersecurity & Forensics  
-🔗 GitHub: [Krshnapriyaa](https://github.com/Krshnapriyaa)  
-📧 For academic use and research guidance
+**Krishna Priya K P**
+🎓 MCA | Cybersecurity & Forensics
+🔗 [GitHub: Krshnapriyaa](https://github.com/Krshnapriyaa)
 
 ---
 
