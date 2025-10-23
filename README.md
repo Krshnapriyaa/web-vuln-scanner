@@ -1,18 +1,18 @@
-# ⚡ Simple Web Vulnerability Scanner
+#  Simple Web Vulnerability Scanner
 
 A **Flask-based web vulnerability scanner** designed for **educational and research use**.
 It detects common vulnerabilities like **Cross-Site Scripting (XSS)**, **SQL Injection (SQLi)**, and **Path Traversal**, while providing a clean web interface with downloadable reports.
 
 ---
 
-## 🧠 Overview
+##  Overview
 
 This project crawls target websites, identifies input fields, and injects payloads to analyze responses for potential vulnerabilities.
 It includes **built-in demo data** for realistic scan results even without external targets.
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 | Component         | Technology                          |
 | ----------------- | ----------------------------------- |
@@ -24,7 +24,7 @@ It includes **built-in demo data** for realistic scan results even without exter
 
 ---
 
-## ⚙️ Setup & Execution Steps
+##  Setup & Execution Steps
 
 | Step   | Command / Action                                                                            | Expected Result                              | Screenshot                                       |
 | ------ | ------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------ |
@@ -41,7 +41,7 @@ It includes **built-in demo data** for realistic scan results even without exter
 
 ---
 
-## 🌐 Usage Guide
+##  Usage Guide
 
 ### 1️⃣ Launch the App
 
@@ -76,7 +76,7 @@ You can also test using these demo URLs:
 
 ---
 
-## 🧾 Example Report
+##  Example Report
 
 ```json
 [
@@ -94,7 +94,7 @@ You can also test using these demo URLs:
 
 ---
 
-## 🧩 Results Page Preview
+##  Results Page Preview
 
 ![Result Table](Screenshot%202025-10-23%20190010.png)
 ![XSS Result](Screenshot%202025-10-23%20190036.png)
