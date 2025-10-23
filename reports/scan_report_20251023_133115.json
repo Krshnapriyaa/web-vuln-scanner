@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:31:15.161084",
+  "results": [
+    {
+      "input": "cat",
+      "payload": "1; DROP TABLE users; --",
+      "xss": false,
+      "sqli": true,
+      "url": "https://legacy.example/item?cat=1",
+      "text_snippet": "...syntax error near \";\" (shell/database error leaked)",
+      "form_action": "https://legacy.example/item",
+      "severity": "High",
+      "confidence": "60%",
+      "remediation": "Use safe APIs; avoid shelling out with user input"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:29:54.170386",
+  "results": [
+    {
+      "input": "id",
+      "payload": "45 UNION SELECT null,version()",
+      "xss": false,
+      "sqli": true,
+      "url": "https://shop.example/item?id=45",
+      "text_snippet": "PostgreSQL 12.5 (Debian ...) shown in response",
+      "form_action": "https://shop.example/item",
+      "severity": "Critical",
+      "confidence": "95%",
+      "remediation": "Parameterize queries; whitelist numeric IDs"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:24:04.255498",
+  "results": [
+    {
+      "input": "username",
+      "payload": "admin' OR '1'='1",
+      "xss": false,
+      "sqli": true,
+      "url": "https://app.local/login",
+      "text_snippet": "Login failed for user admin' OR '1'='1 (DB error)",
+      "form_action": "https://app.local/login",
+      "severity": "Critical",
+      "confidence": "85%",
+      "remediation": "Use prepared statements, parameterized queries"
+    }
+  ]
+}

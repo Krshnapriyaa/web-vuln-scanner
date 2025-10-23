@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:32:11.707496",
+  "results": [
+    {
+      "input": "sort",
+      "payload": "' OR 1=1 -- ",
+      "xss": false,
+      "sqli": true,
+      "url": "https://example.com/products?sort=name",
+      "text_snippet": "...All products listed (unexpectedly)...",
+      "form_action": "https://example.com/products",
+      "severity": "Medium",
+      "confidence": "70%",
+      "remediation": "Parameterize and validate values (enum)"
+    }
+  ]
+}

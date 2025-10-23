@@ -1,0 +1,29 @@
+{
+  "created": "2025-10-23T13:29:19.616713",
+  "results": [
+    {
+      "input": "q",
+      "payload": "\"><script>alert(1)</script>",
+      "xss": true,
+      "sqli": false,
+      "url": "https://example.com/search?q=test",
+      "text_snippet": "...Search results for \"\"><script>alert(1)</script>...\"",
+      "form_action": "https://example.com/search",
+      "severity": "High",
+      "confidence": "90%",
+      "remediation": "HTML-encode output, use CSP, validate input"
+    },
+    {
+      "input": "q",
+      "payload": "'><svg/onload=alert(1)>",
+      "xss": true,
+      "sqli": false,
+      "url": "https://example.com/search?q=test",
+      "text_snippet": "...results: ''><svg/onload=alert(1)>...",
+      "form_action": "https://example.com/search",
+      "severity": "High",
+      "confidence": "80%",
+      "remediation": "Escape input, sanitize HTML"
+    }
+  ]
+}

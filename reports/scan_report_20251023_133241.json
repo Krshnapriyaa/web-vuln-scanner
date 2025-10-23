@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:32:41.485781",
+  "results": [
+    {
+      "input": "q",
+      "payload": "\"><script>alert(1)</script>",
+      "xss": true,
+      "sqli": false,
+      "url": "http://127.0.0.1:8080/test_form.html",
+      "text_snippet": "...Search results for \"\"><script>alert(1)</script>...\"",
+      "form_action": "http://127.0.0.1:8080/test_form.html",
+      "severity": "High",
+      "confidence": "90%",
+      "remediation": "HTML-encode output, use CSP, validate input"
+    }
+  ]
+}

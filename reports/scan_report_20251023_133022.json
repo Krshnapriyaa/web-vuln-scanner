@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:30:22.259636",
+  "results": [
+    {
+      "input": "comment",
+      "payload": "<img src=x onerror=alert(1)>",
+      "xss": true,
+      "sqli": false,
+      "url": "https://blog.example/comment",
+      "text_snippet": "...<img src=x onerror=alert(1)>... shown on post page",
+      "form_action": "https://blog.example/comment",
+      "severity": "High",
+      "confidence": "92%",
+      "remediation": "Sanitize/escape on output, Content Security Policy"
+    }
+  ]
+}

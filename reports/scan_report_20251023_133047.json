@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:30:47.768153",
+  "results": [
+    {
+      "input": "bio",
+      "payload": "{\"bio\":\"</script><script>alert(1)</script>\"}",
+      "xss": true,
+      "sqli": false,
+      "url": "https://api.example/profile",
+      "text_snippet": "...bio: </script><script>alert(1)</script>...",
+      "form_action": "https://api.example/profile",
+      "severity": "High",
+      "confidence": "88%",
+      "remediation": "Properly escape JSON rendered into HTML"
+    }
+  ]
+}

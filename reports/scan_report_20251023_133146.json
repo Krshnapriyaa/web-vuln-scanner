@@ -1,0 +1,18 @@
+{
+  "created": "2025-10-23T13:31:46.608292",
+  "results": [
+    {
+      "input": "sort",
+      "payload": "../../../../etc/passwd",
+      "xss": false,
+      "sqli": false,
+      "url": "https://example.com/filter",
+      "text_snippet": "root:x:0:0:... (file content returned)",
+      "form_action": "https://example.com/filter",
+      "vuln_type": "Path traversal",
+      "severity": "Critical",
+      "confidence": "98%",
+      "remediation": "Normalize and whitelist file paths, avoid direct fs access"
+    }
+  ]
+}

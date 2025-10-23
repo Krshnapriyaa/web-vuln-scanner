@@ -1,0 +1,17 @@
+{
+  "created": "2025-10-23T13:25:32.196349",
+  "results": [
+    {
+      "input": "user",
+      "payload": "%3Cscript%3Ealert(1)%3C/script%3E",
+      "xss": true,
+      "sqli": false,
+      "url": "https://example.com/profile?user=krish",
+      "text_snippet": "...profile: <script>alert(1)</script>...",
+      "form_action": "https://example.com/profile",
+      "severity": "High",
+      "confidence": "90%",
+      "remediation": "Proper escaping at output context"
+    }
+  ]
+}
