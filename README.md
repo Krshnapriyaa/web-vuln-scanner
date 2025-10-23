@@ -5,14 +5,14 @@ It detects common vulnerabilities like **Cross-Site Scripting (XSS)**, **SQL Inj
 
 ---
 
-## 🧬 Overview
+## 🧠 Overview
 
 This project crawls target websites, identifies input fields, and injects payloads to analyze responses for potential vulnerabilities.
 It includes **built-in demo data** for realistic scan results even without external targets.
 
 ---
 
-## 🧉 Tech Stack
+## 🧩 Tech Stack
 
 | Component         | Technology                          |
 | ----------------- | ----------------------------------- |
@@ -26,18 +26,18 @@ It includes **built-in demo data** for realistic scan results even without exter
 
 ## ⚙️ Setup & Execution Steps
 
-| Step   | Command / Action                                                                            | Expected Result                              | Screenshot                                                   |
-| ------ | ------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------ |
-| **1**  | `git clone https://github.com/Krshnapriyaa/web-vuln-scanner.git` <br> `cd web-vuln-scanner` | Project cloned successfully                  | ![Step 1](screenshots/Screenshot%20\(205\).png)              |
-| **2**  | `python -m venv venv` <br> `venv\\Scripts\\activate`                                        | Virtual environment created                  | ![Step 2](screenshots/Screenshot%20\(206\).png)              |
-| **3**  | `pip install -r requirements.txt`                                                           | All dependencies installed successfully      | ![Step 3](screenshots/Screenshot%202025-10-23%20185456.png)  |
-| **4**  | `python -m webapp.app`                                                                      | Flask app started at `http://127.0.0.1:5000` | ![Step 4](screenshots/Screenshot%20\(212\).png)              |
-| **5**  | Open browser → `http://127.0.0.1:5000`                                                      | Homepage loaded successfully                 | ![Step 5](screenshots/Screenshot%202025-10-23%20185456.png)  |
-| **6**  | Enter target URL → Click **Start Scan**                                                     | Scan initiated successfully                  | ![Step 6](screenshots/Screenshot%202025-10-23%20185942.png)  |
-| **7**  | Scan progress visible                                                                       | Detected results displayed in table          | ![Step 7](screenshots/Screenshot%202025-10-23%20190010.png)  |
-| **8**  | View results for login                                                                      | SQL Injection detected                       | ![Step 8](screenshots/Screenshot%202025-10-23%20190036.png)  |
-| **9**  | View results for search                                                                     | XSS vulnerability identified                 | ![Step 9](screenshots/Screenshot%202025-10-23%20190101.png)  |
-| **10** | Download JSON report                                                                        | Saved under `/reports/` folder               | ![Step 10](screenshots/Screenshot%202025-10-23%20190224.png) |
+| Step   | Command / Action                                                                            | Expected Result                              | Screenshot                                       |
+| ------ | ------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------ |
+| **1**  | `git clone https://github.com/Krshnapriyaa/web-vuln-scanner.git` <br> `cd web-vuln-scanner` | Project cloned successfully                  | ![Step 1](Screenshot%20\(205\).png)              |
+| **2**  | `python -m venv venv` <br> `venv\\Scripts\\activate`                                        | Virtual environment created                  | ![Step 2](Screenshot%20\(206\).png)              |
+| **3**  | `pip install -r requirements.txt`                                                           | All dependencies installed successfully      | ![Step 3](Screenshot%202025-10-23%20185456.png)  |
+| **4**  | `python -m webapp.app`                                                                      | Flask app started at `http://127.0.0.1:5000` | ![Step 4](Screenshot%20\(212\).png)              |
+| **5**  | Open browser → `http://127.0.0.1:5000`                                                      | Homepage loaded successfully                 | ![Step 5](Screenshot%202025-10-23%20185456.png)  |
+| **6**  | Enter target URL → Click **Start Scan**                                                     | Scan initiated successfully                  | ![Step 6](Screenshot%202025-10-23%20185942.png)  |
+| **7**  | Scan progress visible                                                                       | Detected results displayed in table          | ![Step 7](Screenshot%202025-10-23%20190010.png)  |
+| **8**  | View results for login                                                                      | SQL Injection detected                       | ![Step 8](Screenshot%202025-10-23%20190036.png)  |
+| **9**  | View results for search                                                                     | XSS vulnerability identified                 | ![Step 9](Screenshot%202025-10-23%20190101.png)  |
+| **10** | Download JSON report                                                                        | Saved under `/reports/` folder               | ![Step 10](Screenshot%202025-10-23%20190224.png) |
 
 ---
 
@@ -94,12 +94,12 @@ You can also test using these demo URLs:
 
 ---
 
-## 🧉 Results Page Preview
+## 🧩 Results Page Preview
 
-![Result Table](screenshots/Screenshot%202025-10-23%20190010.png)
-![XSS Result](screenshots/Screenshot%202025-10-23%20190036.png)
-![SQLi Result](screenshots/Screenshot%202025-10-23%20190101.png)
-![Report Download](screenshots/Screenshot%202025-10-23%20190224.png)
+![Result Table](Screenshot%202025-10-23%20190010.png)
+![XSS Result](Screenshot%202025-10-23%20190036.png)
+![SQLi Result](Screenshot%202025-10-23%20190101.png)
+![Report Download](Screenshot%202025-10-23%20190224.png)
 
 ---
 
@@ -109,13 +109,3 @@ You can also test using these demo URLs:
 > This project is intended for cybersecurity education, academic demonstration, and research purposes.
 
 ---
-
-## 👩‍💻 Author
-
-**Krishna Priya K P**
-🎓 MCA | Cybersecurity & Forensics
-🔗 [GitHub: Krshnapriyaa](https://github.com/Krshnapriyaa)
-
----
-
-⭐ *Built for learning — not for exploitation.*
