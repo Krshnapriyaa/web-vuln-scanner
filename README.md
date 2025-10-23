@@ -30,7 +30,7 @@ It includes **built-in demo data** for realistic scan results even without exter
 | ------ | ------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------ |
 | **1**  | `git clone https://github.com/Krshnapriyaa/web-vuln-scanner.git` <br> `cd web-vuln-scanner` | Project cloned successfully                  | ![Step 1](Screenshot%20\(205\).png)              |
 | **2**  | `python -m venv venv` <br> `venv\\Scripts\\activate`                                        | Virtual environment created                  | ![Step 2](Screenshot%20\(206\).png)              |
-| **3**  | `pip install -r requirements.txt`                                                           | All dependencies installed successfully      | ![Step 3](Screenshot%202025-10-23%20185456.png)  |
+| **3**  | `pip install -r requirements.txt`                                                           | All dependencies installed successfully      | ![Step 3](Screenshot%20\(205\).png)  |
 | **4**  | `python -m webapp.app`                                                                      | Flask app started at `http://127.0.0.1:5000` | ![Step 4](Screenshot%20\(212\).png)              |
 | **5**  | Open browser → `http://127.0.0.1:5000`                                                      | Homepage loaded successfully                 | ![Step 5](Screenshot%202025-10-23%20185456.png)  |
 | **6**  | Enter target URL → Click **Start Scan**                                                     | Scan initiated successfully                  | ![Step 6](Screenshot%202025-10-23%20185942.png)  |
